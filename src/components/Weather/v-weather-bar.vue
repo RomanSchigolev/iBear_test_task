@@ -33,7 +33,7 @@
 
 <script>
   export default {
-    name: "v-weather",
+    name: "v-weather-bar",
     data() {
       return {
         "weather": {

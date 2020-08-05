@@ -26,7 +26,7 @@
   import {mapGetters} from "vuex";
 
   export default {
-    name: "v-transactions",
+    name: "v-transactions-bar",
     computed: {
       ...mapGetters([
         "TRANSACTIONS"
