@@ -37,7 +37,7 @@
       ]),
       transactionToList() {
         this.ADD_TRANSACTION({
-          title: this.transaction,
+          title: this.transaction.trim(),
           id: v1()
         });
         this.transaction = "";

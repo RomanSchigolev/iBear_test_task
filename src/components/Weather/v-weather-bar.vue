@@ -120,13 +120,12 @@
   }
 
   .weather__place {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 33px;
   }
 
   .weather__desc {
     display: block;
-    margin-top: 6px;
+    margin-top: 4px;
     font-weight: 500;
   }
 
