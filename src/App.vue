@@ -18,11 +18,9 @@
 
 <style>
   .hero {
-    height: 100vh;
-    background-color: #d9f1f6;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 70px;
   }
 </style>

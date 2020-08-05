@@ -25,7 +25,8 @@
 <style scoped>
   .widget {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    width: 100%;
   }
 
   .widget__navigation {

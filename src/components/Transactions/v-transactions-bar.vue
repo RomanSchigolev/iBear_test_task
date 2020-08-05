@@ -20,6 +20,18 @@
         <li class="transactions__item">
           <h3 class="transactions__title">Title-5</h3>
         </li>
+        <li class="transactions__item">
+          <h3 class="transactions__title">Title-6</h3>
+        </li>
+        <li class="transactions__item">
+          <h3 class="transactions__title">Title-7</h3>
+        </li>
+        <li class="transactions__item">
+          <h3 class="transactions__title">Title-8</h3>
+        </li>
+        <li class="transactions__item">
+          <h3 class="transactions__title">Title-9</h3>
+        </li>
       </ul>
     </div>
   </div>
@@ -45,9 +57,9 @@
   }
 
   .transactions__listing {
-    padding: 30px 50px;
-    max-height: 400px;
-    overflow-y: scroll;
+    padding: 30px 50px 180px;
+    /*max-height: 400px;*/
+    /*overflow-y: scroll;*/
   }
 
   .transactions__item {
