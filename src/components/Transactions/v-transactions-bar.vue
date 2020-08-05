@@ -4,17 +4,18 @@
       <h2>Transactions</h2>
     </div>
     <div class="transactions__listing">
-      <h2 class="transactions__empty"
-          v-if="TRANSACTIONS.length === 0"
-      >There is no transactions
+      <h2
+        class="transactions__empty"
+        v-if="TRANSACTIONS.length === 0"
+      >
+        There is no transactions
       </h2>
       <ul class="transactions__list">
         <li
           class="transactions__item"
           v-for="transaction in TRANSACTIONS"
           :key="transaction.id"
-        >
-          <h3 class="transactions__title">{{transaction.title}}</h3>
+        ><h3 class="transactions__title">{{transaction.title}}</h3>
         </li>
       </ul>
     </div>

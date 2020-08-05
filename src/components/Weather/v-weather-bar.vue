@@ -2,7 +2,7 @@
   <div class="weather__bar">
     <div class="weather__date">
       <span>
-        updated: {{getCurrentWeekday}}, {{getCurrentDate}} {{getCurrentMonth}} {{getCurrentYear}}, {{getCurrentTime}}
+        updated: {{setCurrentWeekday}}, {{setCurrentDate}} {{setCurrentMonth}} {{setCurrentYear}}, {{setCurrentTime}}
       </span>
     </div>
     <div class="weather__info">
@@ -54,19 +54,19 @@
       }
     },
     computed: {
-      getCurrentWeekday() {
+      setCurrentWeekday() {
         return (new Date(this.updated)).toLocaleString("en-us", { weekday: 'long' });
       },
-      getCurrentDate() {
+      setCurrentDate() {
         return (new Date(this.updated).getDate());
       },
-      getCurrentMonth() {
+      setCurrentMonth() {
         return (new Date(this.updated).toLocaleString('en-us', { month: 'long' }))
       },
-      getCurrentYear() {
+      setCurrentYear() {
         return (new Date(this.updated).getFullYear())
       },
-      getCurrentTime() {
+      setCurrentTime() {
         return (`${new Date(this.updated).getHours()}:${new Date(this.updated).getMinutes()}`)
       }
     },

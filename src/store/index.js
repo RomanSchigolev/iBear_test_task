@@ -18,7 +18,7 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    TRANSACTIONS: (state) => {
+    TRANSACTIONS(state) {
       return state.transactions.filter(transaction => transaction.title !== "")
     }
   }
