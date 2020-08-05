@@ -10,7 +10,6 @@ export default new Vuex.Store({
   mutations: {
     SET_TRANSACTION(state, transaction) {
       state.transactions.push(transaction);
-      console.log(state.transactions);
     }
   },
   actions: {
@@ -19,6 +18,8 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    TRANSACTIONS: (state) => state.transactions
+    TRANSACTIONS: (state) => {
+      return state.transactions.filter(transaction => transaction.title !== "")
+    }
   }
 })

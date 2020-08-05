@@ -4,6 +4,10 @@
       <h2>Transactions</h2>
     </div>
     <div class="transactions__listing">
+      <h2 class="transactions__empty"
+          v-if="TRANSACTIONS.length === 0"
+      >There is no transactions
+      </h2>
       <ul class="transactions__list">
         <li
           class="transactions__item"
@@ -45,6 +49,13 @@
 
   .transactions__listing {
     padding: 30px 50px 180px;
+  }
+
+  .transactions__empty {
+    color: #a5a5a5;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
   }
 
   .transactions__item {
