@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "json_weather": "json-server --port 3002 --watch db_weather.json",
+    "json_weather": "json-server --port 3002 --watch db_transactions.json",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },

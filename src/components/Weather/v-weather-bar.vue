@@ -2,7 +2,7 @@
   <div class="weather__bar">
     <div class="weather__date">
       <span>
-        updated: {{new Date(updated).toLocaleString("en-us", { weekday: 'long' })}}, {{new Date(updated).getDate()}} {{new Date(updated).toLocaleString('en-us', { month: 'long' })}} {{new Date(updated).getFullYear()}}, {{new Date(updated).getHours()}}:{{new Date(updated).getMinutes()}}
+        updated: {{getCurrentWeekday}}, {{getCurrentDate}} {{getCurrentMonth}} {{getCurrentYear}}, {{getCurrentTime}}
       </span>
     </div>
     <div class="weather__info">
@@ -53,6 +53,23 @@
         "name": "London"
       }
     },
+    computed: {
+      getCurrentWeekday() {
+        return (new Date(this.updated)).toLocaleString("en-us", { weekday: 'long' });
+      },
+      getCurrentDate() {
+        return (new Date(this.updated).getDate());
+      },
+      getCurrentMonth() {
+        return (new Date(this.updated).toLocaleString('en-us', { month: 'long' }))
+      },
+      getCurrentYear() {
+        return (new Date(this.updated).getFullYear())
+      },
+      getCurrentTime() {
+        return (`${new Date(this.updated).getHours()}:${new Date(this.updated).getMinutes()}`)
+      }
+    },
     methods: {}
   }
 </script>
@@ -72,7 +89,7 @@
 
   .weather__date span {
     color: #A5A5A5;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .weather__info {

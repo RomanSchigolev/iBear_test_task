@@ -19,7 +19,7 @@
 <style>
   .hero {
     height: 100vh;
-    background-color: #D9F1F6;
+    background-color: #d9f1f6;
     position: relative;
     display: flex;
     align-items: center;
