@@ -5,32 +5,12 @@
     </div>
     <div class="transactions__listing">
       <ul class="transactions__list">
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-1</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-2</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-3</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-4</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-5</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-6</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-7</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-8</h3>
-        </li>
-        <li class="transactions__item">
-          <h3 class="transactions__title">Title-9</h3>
+        <li
+          class="transactions__item"
+          v-for="transaction in TRANSACTIONS"
+          :key="transaction.id"
+        >
+          <h3 class="transactions__title">{{transaction.title}}</h3>
         </li>
       </ul>
     </div>
@@ -38,8 +18,15 @@
 </template>
 
 <script>
+  import {mapGetters} from "vuex";
+
   export default {
-    name: "v-transactions"
+    name: "v-transactions",
+    computed: {
+      ...mapGetters([
+        "TRANSACTIONS"
+      ])
+    }
   }
 </script>
 
@@ -58,8 +45,6 @@
 
   .transactions__listing {
     padding: 30px 50px 180px;
-    /*max-height: 400px;*/
-    /*overflow-y: scroll;*/
   }
 
   .transactions__item {

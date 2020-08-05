@@ -5,15 +5,20 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    weather: []
+    transactions: []
   },
   mutations: {
+    SET_TRANSACTION(state, transaction) {
+      state.transactions.push(transaction);
+      console.log(state.transactions);
+    }
   },
   actions: {
+    ADD_TRANSACTION({commit}, transaction) {
+      commit("SET_TRANSACTION", transaction)
+    }
   },
   getters: {
-    WEATHER(state) {
-      return state.weather;
-    }
+    TRANSACTIONS: (state) => state.transactions
   }
 })

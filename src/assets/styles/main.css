@@ -2,13 +2,13 @@
 
 
 ::-webkit-scrollbar{
-  width: 12px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb{
-  background-color: #d9f1f6;
+  background-color: #000000;
 }
 
 * {
