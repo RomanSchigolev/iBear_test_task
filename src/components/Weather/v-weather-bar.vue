@@ -69,8 +69,7 @@
       setCurrentTime() {
         return (`${new Date(this.updated).getHours()}:${new Date(this.updated).getMinutes()}`)
       }
-    },
-    methods: {}
+    }
   }
 </script>
 
