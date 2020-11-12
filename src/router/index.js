@@ -1,20 +1,19 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Dashboard from "@/views/v-dashboard";
-import Transactions from "@/views/v-transactions";
-
 Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
     {
       path: "/dashboard",
-      component: Dashboard
+      name: "Dashboard",
+      component: () => import("@/views/v-dashboard")
     },
     {
       path: "/transactions",
-      component: Transactions
+      name: "Transactions",
+      component: () => import("@/views/v-transactions")
     }
   ]
 });
